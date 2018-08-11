@@ -149,9 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_COM: {fileID: 4045585694855434}
   thrust: 2000
-  rotationRate: 1
-  rotationThreshold: 25
-  maxRotation: 15
 --- !u!212 &212819479596543818
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -186,7 +183,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f74c068301c211c499893ea3c4fef2c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
