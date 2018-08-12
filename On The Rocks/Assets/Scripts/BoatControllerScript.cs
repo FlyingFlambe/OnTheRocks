@@ -42,5 +42,10 @@ public class BoatControllerScript : MonoBehaviour {
     {
         horizontalInput = Input.GetAxis("Horizontal");
         rb2d.AddForce(transform.right * horizontalInput * thrust);
+
+        if (rb2d.velocity.x < 0f)
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        else
+            transform.localScale = new Vector3(1f, 1f, 1f);
     }
 }

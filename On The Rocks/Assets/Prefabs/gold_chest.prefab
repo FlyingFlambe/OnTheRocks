@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4199088656854522}
   - component: {fileID: 212455535422280556}
   - component: {fileID: 50601350319285958}
-  - component: {fileID: 60448236035302212}
+  - component: {fileID: 61283959232475628}
   m_Layer: 0
   m_Name: gold_chest
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886730102162328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.58475494, y: 3.9255497, z: 0.08205761}
+  m_LocalPosition: {x: 1.96, y: 2.6, z: 0.08205761}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,36 +62,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60448236035302212
-PolygonCollider2D:
+--- !u!61 &61283959232475628
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886730102162328}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 8a8083e2361576648b2bc4cf4dfef7b4, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.06, y: -0.28}
   m_SpriteTilingProperty:
-    border: {x: 0.01, y: 0, z: 0, w: 0.07}
+    border: {x: 0.0625, y: 0, z: 0, w: 0.4375}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 0.625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.0624156, y: 0.07355118}
-      - {x: -0.1204263, y: 0.043579817}
-      - {x: -0.12107974, y: -0.074204445}
-      - {x: 0.1217331, y: -0.074204445}
-      - {x: 0.1217331, y: 0.04356575}
-      - {x: 0.06304085, y: 0.07355142}
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.425}
+  m_EdgeRadius: 0
 --- !u!212 &212455535422280556
 SpriteRenderer:
   m_ObjectHideFlags: 1
