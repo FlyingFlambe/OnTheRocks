@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212455535422280556}
   - component: {fileID: 50601350319285958}
   - component: {fileID: 61283959232475628}
+  - component: {fileID: 114088033670970294}
   m_Layer: 0
   m_Name: gold_chest
-  m_TagString: Untagged
+  m_TagString: Loot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +71,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1886730102162328}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 75d8ec3dbcfcaaf43b0659952b6d6385, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -87,6 +88,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.425}
   m_EdgeRadius: 0
+--- !u!114 &114088033670970294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886730102162328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f3b5d7c3a81714d8b9b4dfb0b397c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTrigger: {fileID: 0}
+  goldAmount: 1000
+  isLootable: 0
 --- !u!212 &212455535422280556
 SpriteRenderer:
   m_ObjectHideFlags: 1
