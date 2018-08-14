@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50601350319285958}
   - component: {fileID: 61283959232475628}
   - component: {fileID: 114088033670970294}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: gold_chest
   m_TagString: Loot
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -99,8 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f3b5d7c3a81714d8b9b4dfb0b397c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lootTrigger: {fileID: 0}
   goldAmount: 1000
+  minThrowForce: 5
+  maxThrowForce: 50
+  xMinThrowAngle: -2
+  xMaxThrowAngle: 2
+  yMinThrowAngle: 2
+  yMaxThrowAngle: 10
   isLootable: 0
 --- !u!212 &212455535422280556
 SpriteRenderer:

@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4454323086710730}
   - component: {fileID: 212330260921954768}
   - component: {fileID: 50213329065056298}
-  - component: {fileID: 60124033202280802}
   - component: {fileID: 114547039355437108}
-  m_Layer: 0
+  - component: {fileID: 70217488187317402}
+  m_Layer: 9
   m_Name: gold_sack
   m_TagString: Loot
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1710641459853634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.47, y: 30.68, z: 0}
+  m_LocalPosition: {x: 5.744667, y: 27.741806, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,7 +54,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60124033202280802
-PolygonCollider2D:
+--- !u!70 &70217488187317402
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,30 +75,9 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0.625, y: 0, z: 0, w: 0.9375}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 2}
-    newSize: {x: 0.75, y: 0.25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.46033287, y: -0.27329826}
-      - {x: 0.4588524, y: -0.19576645}
-      - {x: 0.3466332, y: -0.15383148}
-      - {x: 0.24285197, y: -0.298872}
-      - {x: 0.105038345, y: -0.395401}
-      - {x: -0.021475613, y: -0.56523514}
-      - {x: -0.0053791404, y: -0.824419}
-      - {x: 0.11977577, y: -0.9603329}
-      - {x: 0.4325081, y: -0.9658661}
-      - {x: 0.5744188, y: -0.87874985}
-      - {x: 0.63053393, y: -0.60177994}
-      - {x: 0.55657876, y: -0.4154415}
+  m_Offset: {x: 0.3, y: -0.62}
+  m_Size: {x: 0.56, y: 0.71}
+  m_Direction: 0
 --- !u!114 &114547039355437108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,8 +89,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f3b5d7c3a81714d8b9b4dfb0b397c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lootTrigger: {fileID: 0}
   goldAmount: 500
+  minThrowForce: 5
+  maxThrowForce: 50
+  xMinThrowAngle: -2
+  xMaxThrowAngle: 2
+  yMinThrowAngle: 2
+  yMaxThrowAngle: 10
   isLootable: 0
 --- !u!212 &212330260921954768
 SpriteRenderer:

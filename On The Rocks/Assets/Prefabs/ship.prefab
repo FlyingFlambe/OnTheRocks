@@ -205,8 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01597ece54d5b83499f66b261e59ca97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lootTrigger: {fileID: 61993855871623720}
-  pierTrigger: {fileID: 0}
+  lootTriggerArea: {fileID: 61993855871623720}
   onPier: 0
 --- !u!212 &212819479596543818
 SpriteRenderer:

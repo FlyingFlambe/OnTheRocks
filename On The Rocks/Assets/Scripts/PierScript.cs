@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PierScript : MonoBehaviour {
 
@@ -8,7 +9,7 @@ public class PierScript : MonoBehaviour {
     LootCollectScript lootCollect;
 
     public float lootScore;
-
+    public Text lootText;
 
 
 	void Start () {
@@ -17,20 +18,13 @@ public class PierScript : MonoBehaviour {
 	}
 	
 	void Update () {
-        Debug.Log("Score: " + lootScore);
+        lootText.text = "" + lootScore;
 	}
 
-    /*
-    private void OnTriggerStay2D(Collider2D other)
+    // Opens and closes pier.
+    void PierManager()
     {
-        if (other.CompareTag("Loot"))
-        {
-            if (lootCollect.onPier && gold.isLootable)
-            {
 
-                Debug.Log("Delete loot and give score");
-            }
-        }
     }
-    */
+
 }
