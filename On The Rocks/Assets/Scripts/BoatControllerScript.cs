@@ -8,6 +8,7 @@ public class BoatControllerScript : MonoBehaviour {
     [Space(15)]
     public float thrust = 1.0f;
 
+    Animator anim;
     Rigidbody2D rb2d;
     float horizontalInput;
     bool inputFlag;
@@ -16,6 +17,7 @@ public class BoatControllerScript : MonoBehaviour {
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         inputFlag = false;
     }
 
@@ -23,6 +25,7 @@ public class BoatControllerScript : MonoBehaviour {
         //InputFlagging();
         Balance();
         Movement();
+        BoatAnimation();
 	}
 
     void InputFlagging()
@@ -47,5 +50,13 @@ public class BoatControllerScript : MonoBehaviour {
             transform.localScale = new Vector3(-1f, 1f, 1f);
         else
             transform.localScale = new Vector3(1f, 1f, 1f);
+    }
+
+    void BoatAnimation()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+            anim.SetBool("isThrusting", true);
+        else
+            anim.SetBool("isThrusting", false);
     }
 }
