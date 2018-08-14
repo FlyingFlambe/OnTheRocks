@@ -15,23 +15,17 @@ public class GoldSpawnScript : MonoBehaviour {
 
     bool spawnGold = false;
 
+    GameControllerScript game;
     TimerScript timer;
 
 
 	void Start () {
 
+        game = FindObjectOfType<GameControllerScript>();
         timer = FindObjectOfType<TimerScript>();
         timer.timerOn = true;
         InvokeRepeating("SpawnGold", spawnTime, spawnTime);
 	}
-
-    private void Update()
-    {
-        if (!timer.timerOn)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     void SpawnGold()
     {
@@ -40,7 +34,5 @@ public class GoldSpawnScript : MonoBehaviour {
 
         Instantiate(loot[lootIndex], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
         spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
-
-
     }
 }
