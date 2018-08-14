@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50213329065056298}
   - component: {fileID: 114547039355437108}
   - component: {fileID: 70217488187317402}
+  - component: {fileID: 95028195248315214}
   m_Layer: 9
   m_Name: gold_sack
   m_TagString: Loot
@@ -36,8 +37,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1710641459853634}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.744667, y: 27.741806, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.47, y: -1.3199997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,6 +79,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0.3, y: -0.62}
   m_Size: {x: 0.56, y: 0.71}
   m_Direction: 0
+--- !u!95 &95028195248315214
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1710641459853634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0aabee0742eb5ab4b880fdfc5d9fb749, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114547039355437108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,8 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f3b5d7c3a81714d8b9b4dfb0b397c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoke: {fileID: 1776180740447466, guid: bb5e06e50b1ca7c47a953706db01e2b1, type: 2}
   goldAmount: 500
-  minThrowForce: 5
+  minThrowForce: 30
   maxThrowForce: 50
   xMinThrowAngle: -2
   xMaxThrowAngle: 2

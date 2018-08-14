@@ -108,8 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f3b5d7c3a81714d8b9b4dfb0b397c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoke: {fileID: 1776180740447466, guid: bb5e06e50b1ca7c47a953706db01e2b1, type: 2}
   goldAmount: 100
-  minThrowForce: 5
+  minThrowForce: 30
   maxThrowForce: 50
   xMinThrowAngle: -2
   xMaxThrowAngle: 2

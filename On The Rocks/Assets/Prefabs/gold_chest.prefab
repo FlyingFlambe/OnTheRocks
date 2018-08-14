@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50601350319285958}
   - component: {fileID: 61283959232475628}
   - component: {fileID: 114088033670970294}
+  - component: {fileID: 95866921643371148}
   m_Layer: 9
   m_Name: gold_chest
   m_TagString: Loot
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886730102162328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.96, y: 2.6, z: 0.08205761}
+  m_LocalPosition: {x: 1.9879814, y: 7.299999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,6 +89,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.425}
   m_EdgeRadius: 0
+--- !u!95 &95866921643371148
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886730102162328}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9289bb50cb530824091f3af3aa10f55f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114088033670970294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,8 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f3b5d7c3a81714d8b9b4dfb0b397c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoke: {fileID: 1776180740447466, guid: bb5e06e50b1ca7c47a953706db01e2b1, type: 2}
   goldAmount: 1000
-  minThrowForce: 5
+  minThrowForce: 30
   maxThrowForce: 50
   xMinThrowAngle: -2
   xMaxThrowAngle: 2

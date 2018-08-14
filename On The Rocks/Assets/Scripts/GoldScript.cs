@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GoldScript : MonoBehaviour {
 
+    public GameObject smoke;
     public float goldAmount;
     [Space(15)]
 
@@ -39,7 +40,7 @@ public class GoldScript : MonoBehaviour {
 
         isLootable = false;
         ThrowGold();
-
+        SpawnSmoke();
     }
 
     private void Update()
@@ -73,6 +74,11 @@ public class GoldScript : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+    }
+
+    void SpawnSmoke()
+    {
+        Instantiate(smoke, transform.position, transform.rotation);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

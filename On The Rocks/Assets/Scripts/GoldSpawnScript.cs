@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class GoldSpawnScript : MonoBehaviour {
 
-    public float minSpawnTime = 1f;
-    public float maxSpawnTime = 2f;
-    float spawnTime = 2f;
+    public float spawnTime = 1f;
     [Space(10)]
 
     public Transform[] spawnPoints;
@@ -33,6 +31,5 @@ public class GoldSpawnScript : MonoBehaviour {
         int lootIndex = Random.Range(0, loot.Length);
 
         Instantiate(loot[lootIndex], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-        spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
     }
 }
