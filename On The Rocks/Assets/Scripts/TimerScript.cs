@@ -29,5 +29,20 @@ public class TimerScript : MonoBehaviour {
             timerOn = true;
         }
 
+        ResetTimer();
+
 	}
+
+    void ResetTimer()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            timer = 60f;
+            timer -= Time.deltaTime;
+            timerText.text = "TIME: " + timer.ToString("F1") + " s";
+            timerText.color = Color.black;
+            timeUp.color = Color.clear;
+            timerOn = true;
+        }
+    }
 }

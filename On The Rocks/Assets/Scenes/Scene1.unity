@@ -10784,6 +10784,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootScore: 0
   lootText: {fileID: 1434298027}
+  pierStacks:
+  - {fileID: 757440893}
+  - {fileID: 1276566187}
+  - {fileID: 1372171266}
+  - {fileID: 1806979434}
+  - {fileID: 1758539874}
 --- !u!1001 &1422547866
 Prefab:
   m_ObjectHideFlags: 0

@@ -40,7 +40,9 @@ public class GoldScript : MonoBehaviour {
     private void Update()
     {
         if (lootCollect.onPier && isLootable)
-            ScoreGold();    
+            ScoreGold();
+
+        ResetGold();
     }
 
     void ScoreGold()
@@ -58,6 +60,14 @@ public class GoldScript : MonoBehaviour {
         throwAngle = new Vector2(Random.Range(xMinThrowAngle, xMaxThrowAngle), Random.Range(yMinThrowAngle, yMaxThrowAngle));
 
         rb2d.AddForce(throwAngle * throwForce);
+    }
+
+    void ResetGold()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
