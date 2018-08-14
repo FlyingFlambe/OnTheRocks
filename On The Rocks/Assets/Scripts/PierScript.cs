@@ -7,6 +7,7 @@ public class PierScript : MonoBehaviour {
 
     GoldScript gold;
     LootCollectScript lootCollect;
+    GameControllerScript game;
 
     public float lootScore;
     public Text lootText;
@@ -14,14 +15,19 @@ public class PierScript : MonoBehaviour {
 
     public SpriteRenderer[] pierStacks;
 
-	void Start () {
+    float timeClock = 5f;
+    bool countdown = false;
 
+    void Start () {
+
+        game = FindObjectOfType<GameControllerScript>();
         lootCollect = FindObjectOfType<LootCollectScript>();
 	}
 	
 	void Update () {
         lootText.text = "" + lootScore;
 
+        TutorialText();
         PierStacking();
         PierManager();
         ResetScore();
@@ -93,5 +99,24 @@ public class PierScript : MonoBehaviour {
         {
             lootScore = 0;
         }
+    }
+
+    void TutorialText()
+    {
+        if (countdown)
+        {
+            timeClock -= Time.deltaTime;
+            game.tutorial2Text.color = Color.white;
+        }
+
+        if (timeClock <= 0f)
+            game.tutorial2Text.color = Color.clear;
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!countdown && (game.tutorial1Text.color != Color.white))
+            countdown = true;
     }
 }

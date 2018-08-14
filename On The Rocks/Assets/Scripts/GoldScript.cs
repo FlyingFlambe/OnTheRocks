@@ -19,14 +19,19 @@ public class GoldScript : MonoBehaviour {
     Vector2 throwAngle;
     public bool isLootable;             // Do not touch
 
+    GameControllerScript game;
     LootCollectScript lootCollect;
     PierScript pier;
     TimerScript timer;
     Rigidbody2D rb2d;
+
+    float timeClock = 5f;
+    bool countdown = false;
     
 
     private void Start()
     {
+        game = FindObjectOfType<GameControllerScript>();
         rb2d = GetComponent<Rigidbody2D>();
         lootCollect = FindObjectOfType<LootCollectScript>();
         pier = FindObjectOfType<PierScript>();

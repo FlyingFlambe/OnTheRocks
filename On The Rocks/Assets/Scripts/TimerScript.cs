@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour {
 
+    GameControllerScript game;
+
     public Image timeUp;
     public Text timerText;
     public float timer = 60.0f;
@@ -12,21 +14,30 @@ public class TimerScript : MonoBehaviour {
     public bool timerOn;
 
 
-    void Update () {
+    private void Start()
+    {
+        game = FindObjectOfType<GameControllerScript>();
+    }
 
-        if (timer <= 0f)
+    void Update () {
+        if (game.enableTimer)
         {
-            timerText.text = "TIME: 0.0 s";
-            timerText.color = Color.clear;
-            timeUp.color = Color.white;
-            timerOn = false;
-        }
-        else
-        {
-            timer -= Time.deltaTime;
-            timerText.text = "TIME: " + timer.ToString("F1") + " s";
-            timeUp.color = Color.clear;
-            timerOn = true;
+            if (timer <= 0f)
+            {
+                timerText.text = "TIME: 0.0 s";
+                timerText.color = Color.clear;
+                timeUp.color = Color.white;
+                timerOn = false;
+                game.restartText.color = Color.black;
+            }
+            else
+            {
+                timer -= Time.deltaTime;
+                timerText.text = "TIME: " + timer.ToString("F1") + " s";
+                timeUp.color = Color.clear;
+                timerOn = true;
+                game.restartText.color = Color.clear;
+            }
         }
 
         ResetTimer();

@@ -8275,10 +8275,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 693972490}
-  - {fileID: 1434298026}
-  - {fileID: 1887605779}
-  - {fileID: 1389661703}
   - {fileID: 1834753224}
+  - {fileID: 1434298026}
+  - {fileID: 1389661703}
+  - {fileID: 1887605779}
   - {fileID: 1792402611}
   - {fileID: 594911557}
   - {fileID: 695367593}
@@ -8582,7 +8582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeUp: {fileID: 1834753225}
   timerText: {fileID: 693972491}
-  timer: 20
+  timer: 60
   timerOn: 0
 --- !u!20 &519420031
 Camera:
@@ -8651,6 +8651,13 @@ MonoBehaviour:
   logo: {fileID: 695367594}
   spawner: {fileID: 869679067}
   time: {fileID: 519420028}
+  startText: {fileID: 1515460712}
+  teamText: {fileID: 759516172}
+  tutorial1Text: {fileID: 1792402612}
+  tutorial2Text: {fileID: 594911558}
+  lootScoreText: {fileID: 1434298027}
+  lootScoreImage: {fileID: 1389661704}
+  restartText: {fileID: 1887605780}
   enablePier: 0
   enableLooting: 0
   enableMovement: 0
@@ -8721,7 +8728,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.2
-  m_Text: Press "X" to Drop Off Loot
+  m_Text: 'Press "X" to Drop Off Loot
+
+    at the Pier'
 --- !u!222 &594911559
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10865,7 +10874,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 112559624}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.1565547}
@@ -11296,7 +11305,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 112559624}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11445,7 +11454,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 112559624}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.33}
