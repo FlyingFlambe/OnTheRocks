@@ -8,7 +8,7 @@ AnimatorController:
   m_Name: Title Image
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: enableGameplay
+  - m_Name: EnableGameplay
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -35,7 +35,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: enableGameplay
+    m_ConditionEvent: EnableGameplay
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102994466561052258}
@@ -84,7 +84,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: LogoBannerAnim
-  m_Speed: 1
+  m_Speed: 0.6
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

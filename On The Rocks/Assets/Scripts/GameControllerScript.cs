@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class GameControllerScript : MonoBehaviour {
 
-    GoldSpawnScript goldSpawning;
-    TimerScript timer;
-
     public Image logo;
     public GameObject spawner;
     public GameObject time;
     [Space(15)]
 
-    public bool enableTimer = false;
+    GoldSpawnScript goldSpawning;
+    TimerScript timer;
+    BannerAnimScript banner;
+
+    //public bool enableTimer = false;
     public bool enablePier = false;
     public bool enableLooting = false;
     public bool enableMovement = false;
@@ -23,6 +24,7 @@ public class GameControllerScript : MonoBehaviour {
 
         goldSpawning = FindObjectOfType<GoldSpawnScript>();
         timer = FindObjectOfType<TimerScript>();
+        banner = FindObjectOfType<BannerAnimScript>();
 
         DisableGameplay();
 
@@ -31,10 +33,10 @@ public class GameControllerScript : MonoBehaviour {
 	
 	void Update () {
 		
-        if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Space))
         {
             EnableGameplay();
-            // logo animation
+            banner.anim.SetBool("EnableGameplay", true);
         }
 
 	}
